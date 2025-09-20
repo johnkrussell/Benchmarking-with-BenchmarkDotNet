@@ -32,7 +32,7 @@ public class DictionaryVsConcurrentBenchmarks
     public int ConcurrentLookup() => _cdict[ExistingKey];
 
     [Benchmark]
-    public void DictInsert() => _dict[_nextKey++] = 1; // true "insert" into a pre-sized dict
+    public void DictInsert() => _dict[_nextKey++] = 1;
 
     [Benchmark]
     public void ConcurrentTryAdd() => _cdict.TryAdd(_nextKey++, 1);
